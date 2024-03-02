@@ -1,17 +1,27 @@
 function getComputerChoice() {
 const random = parseInt(Math.floor(Math.random() * 90) + 1);
-return (random);
-}
-const answer = getComputerChoice();
-const Rock = (answer <= 30);
-const Paper = (answer <= 60) &&  (answer > 30);
-const Scissors = (answer <= 90) && (answer > 60);
+
+const Rock = (random <= 30);
+const Paper = (random <= 60) &&  (random > 30);
+const Scissors = (random <= 90) && (random > 60);
+
 if (Rock) {
-    console.log("Rock");
+    return "Rock";
 } else if (Paper) {
-    console.log("Paper");
+    return "Paper";
 } else if (Scissors) {
-    console.log("Scissors");
+    return "Scissors";
 } else {
-    console.log("Error")
+    return "Uh oh!";
 }
+}
+
+const computerChoice = getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
+
+  return {playerSelection, computerSelection};
+}
+const playerChoice = "PaPER";
+const playerSelection = playerChoice.charAt(0).toUpperCase() + playerChoice.toLowerCase().slice(1);
+const computerSelection = computerChoice;
