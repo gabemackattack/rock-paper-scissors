@@ -112,7 +112,11 @@ if (result === "That is a tie!") {
     player += 1;
     console.log("you win this round!");
 }
-
+if (player > computer) {
+    console.log("You win the game!");
+} else if (player < computer) {
+    console.log("You lose the game :(");
+}
 
 console.log(`Player: ${player}, Computer: ${computer}`);
 }
