@@ -25,20 +25,96 @@ function playRound() {
     if (playerSelection === computerSelection) {
     return "That is a tie!";
 } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-    return "You Lose! Paper beats Rock";
+    return "You Lose!";
 } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
     return "You lose! Scissors beats Paper";
 } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-   return "You Lose! Rock beats Scissors";
+   return "You Lose!";
 } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-    return "You Win! Rock beats Scissors";
+    return "You Win!";
 } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-    return "You Win! Scissors beats Paper";
+    return "You Win!";
 } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-    return "You Win! Paper beats Rock";
+    return "You Win!";
 }
 }
 
 function playGame() {
-    
+let player = 0;
+let computer = 0;
+  
+let result = playRound();
+
+if (result === "That is a tie!") {
+      player += 1;
+      computer += 1;
+      console.log("You Tied!");
+  } else if (result === "You Lose!") {
+      computer +=1;
+      console.log("you lose this round");
+  } else if (result === "You Win!") {
+      player += 1;
+      console.log("you win this round!");
+  }
+
+result = playRound();
+
+if (result === "That is a tie!") {
+    player += 1;
+    computer += 1;
+    console.log("You Tied!");
+} else if (result === "You Lose!") {
+    computer +=1;
+    console.log("you lose this round");
+} else if (result === "You Win!") {
+    player += 1;
+    console.log("you win this round!");
 }
+
+result = playRound();
+
+if (result === "That is a tie!") {
+    player += 1;
+    computer += 1;
+    console.log("You Tied!");
+} else if (result === "You Lose!") {
+    computer +=1;
+    console.log("you lose this round");
+} else if (result === "You Win!") {
+    player += 1;
+    console.log("you win this round!");
+}
+
+result = playRound();
+
+if (result === "That is a tie!") {
+    player += 1;
+    computer += 1;
+    console.log("You Tied!");
+} else if (result === "You Lose!") {
+    computer +=1;
+    console.log("you lose this round");
+} else if (result === "You Win!") {
+    player += 1;
+    console.log("you win this round!");
+}
+
+result = playRound();
+
+if (result === "That is a tie!") {
+    player += 1;
+    computer += 1;
+    console.log("You Tied!");
+} else if (result === "You Lose!") {
+    computer +=1;
+    console.log("you lose this round");
+} else if (result === "You Win!") {
+    player += 1;
+    console.log("you win this round!");
+}
+
+
+console.log(`Player: ${player}, Computer: ${computer}`);
+}
+
+playGame();
